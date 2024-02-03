@@ -1,0 +1,220 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.HowItLearns {
+  height: 100%;
+  overflow: hidden;
+
+  .Wrapper {
+    @include wrapper;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+
+    h2 {
+      width: 80%;
+      font-size: 30px;
+
+      @include desktop {
+        font-size: 24px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        width: 70%;
+        margin: 0;
+        margin-top: 15px;
+      }
+    }
+
+    .InfoBox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: space-between;
+      gap: 30px;
+      width: 100%;
+
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+      }
+      
+      * {
+        font-family: $secfont;
+        font-size: 22px;
+      }
+
+      .CardsBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        @include tablet {
+          gap: 15px;   
+        }
+
+        h4 {
+          font-size: 24px;
+
+          @include desktop {
+            font-size: 20px;
+          }
+
+          @include tablet {
+            font-size: 16px;
+          }
+        }
+
+        .Cards {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap: 30px;
+
+          @include tablet {
+            justify-content: center;
+          }
+
+          .Card {
+            width: 170px;
+            height: 170px;
+            border: 5px solid $accent;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all .3s ease;
+            cursor: default;
+
+            @include desktop {
+              width: 135px;
+              height: 135px;
+            }
+
+            @include mobile {
+              width: 80px;
+              height: 80px;
+            }
+          }
+
+          span {
+            font-size: 18px;
+            color: $accent;
+
+            @include desktop {
+              font-size: 15px;
+            }
+
+            @include mobile {
+              font-size: 8px;
+            }
+          }
+
+          .Icon {
+            width: 60%;
+            height: 60%; 
+
+            @include mobile {
+              width: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
+
+      .RightImg {
+        display: flex;
+        position: relative;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        @include tablet {
+          justify-content: center;
+        }
+
+        @include mobile {
+          height: 40%;
+        }
+
+        img {
+          height: 100%;
+          border-radius: 30px;
+
+          @include desktop {
+            height: 90%;
+          }
+
+          @include tablet {
+            height: 70%;
+          }
+
+          @include mobile {
+            height: 45%;
+          }
+        }
+      }
+
+      .LeftImg {
+        @include tablet {
+          display: none;
+        }
+
+        img {
+          height: 90%;
+          width: 90%;
+          border-radius: 30px;
+
+          @include desktop {
+            height: 80%;
+          }
+        }
+      }
+    }
+
+    .Info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+
+      img {
+        border-radius: 30px;
+        height: 180px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+      }
+
+      p {
+        font-weight: bold;
+
+        @include desktop {
+          font-size: 20px;
+        }
+
+        @include tablet {
+          font-size: 16px;
+        }
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

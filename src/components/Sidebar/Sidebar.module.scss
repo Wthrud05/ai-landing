@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+
+  .Bg {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    backdrop-filter: blur(20px);
+    clip-path: circle(30px at 30px 30px);
+
+    @include mobile {
+      width: 70%;
+    }
+  }
+}

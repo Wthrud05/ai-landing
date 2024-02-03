@@ -1,0 +1,183 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.WhatIsThis {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  * {
+    font-family: $secfont;
+  }
+  
+  .Wrapper {
+    @include wrapper;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 50px;
+
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .ImageBox {
+      width: 50%;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 500px;
+        background: $accent-05;
+        filter: blur(100px);
+        animation: blink 3s ease infinite;
+
+        @include tablet {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      @include tablet {
+        height: 40%;
+        width: 350px;
+      }
+
+      @include mobile {
+        height: 30%;
+        width: 250px;
+      }
+    }
+
+    .TextsBox {
+      text-align: center;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      background-image: url('../../assets/whatisthisbg.png');
+      background-position: center center;
+      background-size: auto;
+      border-radius: 50px;
+
+      @include tablet {
+        width: 100%;
+        gap: 15px;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-family: $mainfont;
+        cursor: default;
+
+        @include desktop {
+          font-size: 36px;
+        }
+
+        @include mobile {
+          font-size: 30px;
+        }
+
+        span {
+          color: $accent;
+          font-family: $mainfont;
+        }
+      }
+
+      p {
+        font-size: 30px;
+
+        @include desktop {
+          font-size: 24px;
+        }
+
+        @include tablet {
+          font-size: 20px;
+        }
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      button {
+        @include button;
+      }
+    }
+  }
+
+  .Slogan {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #cacaca;
+
+    p {
+      transform: translateX(105%);
+      font-size: 20px;
+
+      @include desktop {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      @include mobile {
+        transform: translateX(35%);
+      }
+
+      span {
+        font-size: 16px;
+
+        @include desktop {
+          font-size: 14px;
+        }
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: $accent;
+
+      @include mobile {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

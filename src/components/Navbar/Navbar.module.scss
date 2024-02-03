@@ -1,0 +1,37 @@
+@import '../../styles/mixins.scss';
+
+.Navbar {
+  height: 100px;
+
+  .Wrapper {
+    @include wrapper;
+
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+
+    .Logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .Socials {
+      display: flex;
+      gap: 20px;
+
+      a {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
