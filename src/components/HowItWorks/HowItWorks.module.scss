@@ -49,6 +49,15 @@
 
       @include mobile {
         flex-direction: column;
+        transform: none !important;
+
+        .TextsBox {
+          transform: none !important;
+
+          .TextItem {
+            transform: none !important;
+          }
+        }
       }
 
       .TextsBox {
@@ -70,7 +79,7 @@
 
           @include mobile {
             flex-direction: column;
-
+          
             img {
               display: none;
             }

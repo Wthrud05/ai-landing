@@ -10,6 +10,7 @@
   z-index: 99999;
 
   @include mobile {
+    transform: none !important;
     display: none;
   }
 }

@@ -27,6 +27,7 @@
       }
 
       @include mobile {
+        transform: none !important;
         font-size: 16px;
         width: 70%;
         margin: 0;
@@ -193,6 +194,10 @@
       align-items: center;
       text-align: center;
       justify-content: space-around;
+
+      @include mobile {
+        transform: none !important;
+      }
 
       img {
         border-radius: 30px;
