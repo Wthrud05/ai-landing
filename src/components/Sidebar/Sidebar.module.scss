@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   color: $white;
+  background: $accent-dark;
 
   .Bg {
     position: fixed;
@@ -14,8 +15,8 @@
     left: 0;
     bottom: 0;
     width: 400px;
-    backdrop-filter: blur(20px);
-    clip-path: circle(30px at 30px 30px);
+    background: $accent-dark;
+    clip-path: circle(25px at 35px 35px);
 
     @include mobile {
       width: 70%;

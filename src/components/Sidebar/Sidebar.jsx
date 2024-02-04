@@ -8,15 +8,13 @@ import {useClickOutside} from '../../hooks/useClickOutside'
 const variants = {
   open: {
     clipPath: 'circle(1200px at 50px 50px)',
-    backgroundColor: 'rgba(66, 234, 254, 0.5)',
     transition: {
       type: 'spring',
       stiffnes: 400,
     },
   },
   closed: {
-    clipPath: 'circle(30px at 50px 50px)',
-    backgroundColor: 'rgba(0, 0, 0, 0)',
+    clipPath: 'circle(25px at 35px 35px)',
     transition: {
       delay: 0.3,
       type: 'spring',
