@@ -85,6 +85,10 @@
         gap: 15px;
       }
 
+      @include mobile {
+        transform: none !important;
+      }
+
       h1 {
         font-size: 48px;
         font-family: $mainfont;
